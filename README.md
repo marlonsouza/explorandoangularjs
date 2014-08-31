@@ -1,0 +1,1 @@
+<img src="http://marlonsouza.net/images/JavaScript-logo.png" />
