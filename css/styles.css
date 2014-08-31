@@ -1,0 +1,163 @@
+html {
+    background-color: #eff3f6 !important;
+    /*background-image: url(../images/background.jpg) !important;*/
+    background-repeat: repeat-x;
+    background-position: center bottom;
+}
+
+div[class*="-content"]{
+    margin-top: 16px;
+}
+
+h4 i[class*="icon-"]{
+    font-size: 14px;
+}
+
+.title{
+    line-height: 20px;
+     margin-bottom: 5px;
+}
+
+/*faz o icone que esta dentro da aba que não esta ativa ficar com a mesma cor do texto*/
+.nav-tabs li > a > i{
+    color: #0088CC;
+}
+
+/*faz o icone que esta dentro da aba que esta ativa ficar com a mesma cor do texto*/
+.nav-tabs li.active > a > i{
+    color: #333333;
+}
+
+/*remove os estilos dos campos com required*/
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid{
+    color:#555555;
+    border-color:#ccc}
+
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus{
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    outline: 0 none;
+}
+
+
+.breadcrumb.customize{
+    background-color: #ffffff;
+    padding:0px;
+    font-size: 12px;
+}
+
+
+.table th .table-header-icons i:first-child{
+    padding-right: 8px;
+}
+
+.card {
+    background-color: #FFFFFF;
+    border: 1px solid #DDDDDD;   
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.card-header{
+   border-bottom: 1px solid #DDDDDD;
+   padding: 8px 12px;
+}
+
+.card-content{
+    padding: 8px 12px;
+}
+
+.card-footer{
+    border-top: 1px solid #DDDDDD;
+    padding: 8px 12px;
+}
+
+.card-blue{
+    background-color: #049CDB;
+    color:#FFFFFF;
+    border: none;
+    -webkit-box-shadow: 1px 1px 2px 0 rgba(21, 21, 21, 0.4);
+    -moz-box-shadow: 1px 1px 2px 0 rgba(21, 21, 21, 0.4);
+    box-shadow: 1px 1px 2px 0 rgba(21, 21, 21, 0.4);
+}
+
+.card-blue a.btn-link, .card-blue a,
+.card-blue a:hover, .card-blue a:focus, .card-blue a:active {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.card-blue a > i, .card-blue .dropdown ul.dropdown-menu li a{
+    text-decoration: none;
+}
+
+a:hover i.icon-grayLight {
+    color:#333333 !important;
+}
+
+td.item-selecionado, a.item-selecionado{
+    background: #FFFBEA;
+}
+
+a > i[class^="icon-"], a > i[class*="icon-"],
+a > i[class^="icon-"]:hover, a > i[class*="icon-"]:hover{
+    text-decoration: none;
+}
+
+table .btn-group{
+    display: block;
+}
+
+/*Com o mouseover as linhas da tebela ficavam se movendo,
+mesmo com o display:block*/
+.table th, .table td{
+    line-height: 22px !important; 
+}
+
+
+
+
+
+.loading-modal {
+    background-clip: padding-box;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    left: 50%;
+    margin-left: -110px;
+    outline: 0 none;
+    position: fixed;
+    top: 50%;
+    width: 220px;
+    z-index: 1050;
+    padding: 10px 18px;
+    margin-top: -134.5px;
+   
+}
+
+.loading-modal:before{
+    content: "Carregando...";
+    font-size: 22px;
+    left: 60px;
+    position: absolute;
+    text-align: right;
+    top: 20px;
+    padding-left: 8px;
+}
+
+.loading-modal .list-loading{
+    text-align: left;
+}
+
+.loading-modal .list-loading i:first-child{
+    font-size: 3em;
+}
+
+#principal{
+    left: 10px;
+    position: absolute;
+}
