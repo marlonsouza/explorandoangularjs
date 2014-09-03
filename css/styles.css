@@ -1,8 +1,8 @@
 html {
-    background-color: #eff3f6 !important;
-    /*background-image: url(../images/background.jpg) !important;*/
+    background-color: #FFFAFA !important;
     background-repeat: repeat-x;
     background-position: center bottom;
+    font-family: cursive;
 }
 
 div[class*="-content"]{
@@ -94,17 +94,8 @@ select:focus:invalid:focus{
     text-decoration: none;
 }
 
-a:hover i.icon-grayLight {
-    color:#333333 !important;
-}
-
 td.item-selecionado, a.item-selecionado{
     background: #FFFBEA;
-}
-
-a > i[class^="icon-"], a > i[class*="icon-"],
-a > i[class^="icon-"]:hover, a > i[class*="icon-"]:hover{
-    text-decoration: none;
 }
 
 table .btn-group{
@@ -116,10 +107,6 @@ mesmo com o display:block*/
 .table th, .table td{
     line-height: 22px !important; 
 }
-
-
-
-
 
 .loading-modal {
     background-clip: padding-box;
@@ -160,4 +147,36 @@ mesmo com o display:block*/
 #principal{
     left: 10px;
     position: absolute;
+}
+
+#identidade{
+    background-color: #FFD700;
+    padding: 0px;
+    margin: 0px;
+    height: 40px;
+    width: 330px;
+    border: none;
+}
+
+#linka{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: relative;
+    left: -3%;
+}
+
+#linka2{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: relative;
+    left: -5%;
+}
+
+
+#mhs{
+    position: relative;
+    top:-80%;
+    left:40%;
 }
