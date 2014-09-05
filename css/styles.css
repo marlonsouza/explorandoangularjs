@@ -1,162 +1,112 @@
-html {
-    background-color: #FFFAFA !important;
-    background-repeat: repeat-x;
-    background-position: center bottom;
-    font-family: cursive;
+/** Inspired by: http://graphicburger.com/flat-design-ui-components/ **/
+/** Line-chart and donut-chart made by @kseso http://codepen.io/Kseso/pen/phiyL **/
+
+
+/************************************ FONTS ************************************/
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome|zocial);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+}
+@font-face {
+	font-family: 'icomoon';
+	src:url('http://jlalovi-cv.herokuapp.com/font/icomoon.eot');
+	src:url('http://jlalovi-cv.herokuapp.com/font/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('http://jlalovi-cv.herokuapp.com/font/icomoon.ttf') format('truetype'),
+		url('http://jlalovi-cv.herokuapp.com/font/icomoon.woff') format('woff'),
+		url('http://jlalovi-cv.herokuapp.com/font/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
-div[class*="-content"]{
-    margin-top: 16px;
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.icon-cloudy:before {
+	content: "\e60f";
+}
+.icon-sun:before {
+	content: "\e610";
+}
+.icon-cloudy2:before {
+	content: "\e611";
+}
+/************************************* END FONTS *************************************/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-h4 i[class*="icon-"]{
-    font-size: 14px;
+body {
+	background: #FFFFF0;
+    font-family: inherit;
 }
 
-.title{
-    line-height: 20px;
-     margin-bottom: 5px;
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding-left: 0;
 }
 
-/*faz o icone que esta dentro da aba que não esta ativa ficar com a mesma cor do texto*/
-.nav-tabs li > a > i{
-    color: #0088CC;
+h1 {
+	font-size: 23px;
 }
 
-/*faz o icone que esta dentro da aba que esta ativa ficar com a mesma cor do texto*/
-.nav-tabs li.active > a > i{
-    color: #333333;
+h2 {
+	font-size: 17px;
 }
 
-/*remove os estilos dos campos com required*/
-input:focus:invalid,
-textarea:focus:invalid,
-select:focus:invalid{
-    color:#555555;
-    border-color:#ccc}
-
-input:focus:invalid:focus,
-textarea:focus:invalid:focus,
-select:focus:invalid:focus{
-    border-color: rgba(82, 168, 236, 0.8);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
-    outline: 0 none;
+p {
+	font-size: 15px;
 }
 
-
-.breadcrumb.customize{
-    background-color: #ffffff;
-    padding:0px;
-    font-size: 12px;
+a {
+	text-decoration: none;
+	font-size: 15px;
 }
+	a:hover {
+		text-decoration: underline;
+	}
 
-
-.table th .table-header-icons i:first-child{
-    padding-right: 8px;
-}
-
-.card {
-    background-color: #FFFFFF;
-    border: 1px solid #DDDDDD;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
-
-.card-header{
-   border-bottom: 1px solid #DDDDDD;
-   padding: 8px 12px;
-}
-
-.card-content{
-    padding: 8px 12px;
-}
-
-.card-footer{
-    border-top: 1px solid #DDDDDD;
-    padding: 8px 12px;
-}
-
-.card-blue{
-    background-color: #049CDB;
-    color:#FFFFFF;
-    border: none;
-    -webkit-box-shadow: 1px 1px 2px 0 rgba(21, 21, 21, 0.4);
-    -moz-box-shadow: 1px 1px 2px 0 rgba(21, 21, 21, 0.4);
-    box-shadow: 1px 1px 2px 0 rgba(21, 21, 21, 0.4);
-}
-
-.card-blue a.btn-link, .card-blue a,
-.card-blue a:hover, .card-blue a:focus, .card-blue a:active {
-    color: #FFFFFF;
-    text-decoration: underline;
-}
-
-.card-blue a > i, .card-blue .dropdown ul.dropdown-menu li a{
-    text-decoration: none;
-}
-
-td.item-selecionado, a.item-selecionado{
-    background: #FFFBEA;
-}
-
-table .btn-group{
-    display: block;
-}
-
-/*Com o mouseover as linhas da tebela ficavam se movendo,
-mesmo com o display:block*/
-.table th, .table td{
-    line-height: 22px !important;
-}
-
-.loading-modal {
-    background-clip: padding-box;
-    background-color: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 6px;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-    left: 50%;
-    margin-left: -110px;
-    outline: 0 none;
-    position: fixed;
-    top: 50%;
-    width: 220px;
-    z-index: 1050;
-    padding: 10px 18px;
-    margin-top: -134.5px;
-
-}
-
-.loading-modal:before{
-    content: "Carregando...";
-    font-size: 22px;
-    left: 60px;
-    position: absolute;
-    text-align: right;
-    top: 20px;
-    padding-left: 8px;
-}
-
-.loading-modal .list-loading{
-    text-align: left;
-}
-
-.loading-modal .list-loading i:first-child{
-    font-size: 3em;
+h1, h2, p, a, span{
+	color: #1C1C1C;
 }
 
 #principal{
     left: 10px;
-    position: absolute;
+    position: relative;
 }
 
 #identidade{
     background-color: #EEC900;
     padding: 0px;
     margin: 0px;
-    height: 40px;
+    height: 42px;
     width: 330px;
     border: 1px solid #BEBEBE;
     font-family: fantasy;
+    position: relative;
 }
 
 #linka{
@@ -180,4 +130,28 @@ mesmo com o display:block*/
     position: relative;
     top:-80%;
     left:40%;
+}
+
+#menu ul {
+	padding:0px;
+	margin:0px;
+	background-color:#BDB76B;
+}
+
+#menu ul li { display: inline; }
+
+#menu ul li a {
+	padding: 2px 10px;
+	display: inline-block;
+
+	/* visual do link */
+	background-color:#EDEDED;
+	color: #CD2626;
+	text-decoration: none;
+    border: 1px solid #EDEDED;
+}
+
+#menu ul li a:hover {
+	color: #6D6D6D;
+    border: 1px solid;
 }
