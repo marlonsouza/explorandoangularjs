@@ -1,14 +1,26 @@
 <!doctype html>
-<html lang="pt" ng-app>
-	<head>
-		<meta charset="UTF-8">
-		<title>Hello World</title>
-	</head>
-	<body ng-controller="HelloController">
-		<button ng-click="incrementar()">Clicar</button>
-		<label>Você clicou: {{total}} veze(s)</label>
-		
-		<script src="js/angular.min.js"></script>
-		<script src="controllers/controllers.js"></script>
-	</body>
+<html lang="pt" ng-app='myApp'>
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicando ng-view</title>
+</head>
+<body ng-controller="navigationController">
+    <header>
+        <img src="./images/angularjs.png" height="90px" />
+        <hr>
+    </header>
+    <b>Inicio do principio do projeto</b>
+    <footer>
+        <hr>
+        <marlon></marlon>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="main.js"></script>
+
+    <!-- CSS -->
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+</body>
 </html>
