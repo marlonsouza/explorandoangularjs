@@ -132,6 +132,10 @@ h1, h2, p, a, span{
     left:40%;
 }
 
+#menu{
+    width: 453px;
+}
+
 #menu ul {
 	padding:0px;
 	margin:0px;
@@ -155,3 +159,5 @@ h1, h2, p, a, span{
 	color: #6D6D6D;
     border: 1px solid;
 }
+
+

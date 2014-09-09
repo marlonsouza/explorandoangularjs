@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <title>Aplicando ng-view</title>
 </head>
-<body>
+<body ng-controller="itemsController">
     <header>
         <img src="./images/angularjs.png" height="90px" />
         <div ng-include="'./views/menu.html'"></div>
         <hr>
     </header>
+
+    <ng-view></ng-view>
 
     <footer>
         <hr>
@@ -21,6 +23,7 @@
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
     <script src="main.js"></script>
+    <script src="controllers/exemplo1Controller.js"></script>
 
     <!-- CSS -->
     <link href="css/styles.css" type="text/css" rel="stylesheet">
