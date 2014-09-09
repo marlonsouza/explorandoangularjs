@@ -1,22 +1,19 @@
-<div ng-show='adicionaItem'>
-    Novos Itens
-    <form>
-        <table>
-            <tr>
-                <td>Nome:</td>
-                <td><input ng-model='newitem.nome'></td>
-            </tr>
-            <tr>
-                <td>Quantidade:</td>
-                <td><input ng-model='newitem.qtd'><br /></td>
-            </tr>
-            <tr>
-                <td>Preço:</td>
-                <td> <input ng-model='newitem.price'></td>
-            </tr>
-            <tr>
-                <td><td /><button ng-click='novo()'>Adicionar</button></td>
-            </tr>
-        </table>
-    </form>
-</div>
+<form>
+    <table>
+        <tr>
+            <td>Nome:</td>
+            <td><input ng-model='newitem.nome'></td>
+        </tr>
+        <tr>
+            <td>Quantidade:</td>
+            <td><input ng-model='newitem.qtd'><br /></td>
+        </tr>
+        <tr>
+            <td>Preço:</td>
+            <td> <input ng-model='newitem.price'></td>
+        </tr>
+        <tr>
+            <td><td /><button ng-click='novo()'>Adicionar</button></td>
+        </tr>
+    </table>
+</form>

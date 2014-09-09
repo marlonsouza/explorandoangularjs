@@ -1,0 +1,5 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/home/marlon/server/apache-tomcat-8.0.12/webapps/explorandoangularjs/node_modules/grunt/node_modules/js-yaml/lib/js-yaml/dumper.js"
+    ]
+}

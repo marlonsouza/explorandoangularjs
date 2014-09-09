@@ -19,4 +19,12 @@ app.config(function($routeProvider){
    $routeProvider.when('/listaitens', {
         templateUrl:'views/lista_itens.tpl.html'
    });
+
+   $routeProvider.when('/sobre',{
+      templateUrl: 'views/sobre.tpl.html'
+   });
+
+   $routeProvider.when('/portal',{
+      templateUrl: 'views/vendedor.tpl.html'
+   });
 });
