@@ -1,9 +1,11 @@
-grunt.loadNpmTasks('grunt-wiredep');
+module.exports = function (grunt) {
+  grunt.loadNpmTasks('grunt-wiredep');
 
-grunt.initConfig({
-    bowerInstall: {
-      target: {
+  grunt.initConfig({
+    wiredep: {
+      app: {
         src: 'index.html'
       }
     }
-});
+  });
+};
