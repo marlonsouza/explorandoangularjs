@@ -3,7 +3,7 @@
   "version": "0.0.0",
    "devDependencies": {
     "grunt": "",
-    "grunt-wiredep": "^1.0.0"
+    "grunt-wiredep": ""
   },
   "homepage": "https://github.com/marlonsouza/explorandoangularjs",
   "description": "Estudando angulajs a fundo.",
