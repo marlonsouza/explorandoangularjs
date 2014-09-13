@@ -1,23 +1,30 @@
 <!doctype html>
 <html lang="pt" ng-app='myApp'>
 <head>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
     <meta charset="UTF-8">
     <title>Aplicando ng-view</title>
 </head>
 <body ng-controller="itemsController">
-    <header>
-        <img src="./images/angularjs.png" height="90px" />
-        <div ng-include="'./views/menu.html'"></div>
-        <hr>
-    </header>
+    <div class="principal">
+        <header>
+            <img src="./images/angularjs.png" id="logoangular" />
+            <div ng-include="'./views/menu.html'"></div>
+            <hr>
+        </header>
 
-    <ng-view></ng-view>
+        <div class="container-fluid">
+            <ng-view></ng-view>
+        </div>
 
-    <footer>
-        <hr>
-        <br />
-        <marlon></marlon>
-    </footer>
+        <footer>
+            <hr>
+            <br />
+            <marlon></marlon>
+        </footer>
+    </div>
 
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -30,11 +37,16 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
 
+
+
+
     <script src="main.js"></script>
-    <script src="controllers/exemplo1Controller.js"></script>
+    <script src="controllers/mainController.js"></script>
+    <script src="common/dirPagination.js"></script>
 
     <!-- CSS -->
     <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <link href="css/main.css" type="text/css" rel="stylesheet">
 
 
 </body>

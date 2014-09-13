@@ -93,7 +93,7 @@ h1, h2, p, a, span{
 	color: #1C1C1C;
 }
 
-#principal{
+.principal{
     left: 10px;
     position: relative;
 }
@@ -107,6 +107,10 @@ h1, h2, p, a, span{
     border: 1px solid #BEBEBE;
     font-family: fantasy;
     position: relative;
+}
+
+#identidade img{
+    height: 40px;
 }
 
 #linka{
@@ -128,36 +132,72 @@ h1, h2, p, a, span{
 
 #mhs{
     position: relative;
-    top:-80%;
+    top:-60%;
     left:40%;
 }
 
 #menu{
-    width: 453px;
+    width: 581px;
+    border: solid;
+    border-width: 1px;
+    border-color: #777;
+    margin: 0px;
+    padding: 0px;
+    height: 30px;
 }
 
 #menu ul {
 	padding:0px;
 	margin:0px;
-	background-color:#BDB76B;
+    height: 100%;
 }
 
-#menu ul li { display: inline; }
+#menu ul li {
+    display: list-item;
+    padding:0px;
+	margin:0px;
+    text-align: -webkit-match-parent;
+    width: 140px;
+    display: inline-block;
+    height: 100%;
+    list-style-type:0;
+}
+
 
 #menu ul li a {
 	padding: 2px 10px;
 	display: inline-block;
 
-	/* visual do link */
-	background-color:#EDEDED;
+    background-color:#EDEDED;
 	color: #CD2626;
 	text-decoration: none;
     border: 1px solid #EDEDED;
+    padding:0px;
+	margin:0px;
+    height: 100%;
+    width: 140px;
+
 }
 
 #menu ul li a:hover {
-	color: #6D6D6D;
-    border: 1px solid;
+	background-color: #C0C0C0;
+}
+
+header img{
+    height: 90px;
 }
 
 
+.lista{
+    width: 70%;
+}
+
+.cadastro{
+    width: 50%;
+    position: relative;
+}
+
+footer{
+    position: relative;
+    top: 10%;
+}

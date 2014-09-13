@@ -1,22 +1,27 @@
 Lista de Itens
 <p>
-<table border="1">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Quantidade</th>
-            <th>Preço</th>
-            <th>Total</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat='item in items'>
-            <td>{{item.nome}}</td>
-            <td><input ng-model='item.qtd'></td>
-            <td>{{item.price | currency}}</td>
-            <td>{{item.price * item.qtd | currency}}</td>
-            <td><button ng-click="remove($index)">Rem.</button><button ng-click="">Ed.</button></td>
-        </tr>
-    </tbody>
-</table></p>
+<div class="lista">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Quantidade</th>
+                <th>Preço</th>
+                <th>Total</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr dir-paginate="item in items | itemsPerPage:10">
+                <td>{{item.nome}}</td>
+                <td><input ng-model='item.qtd'></td>
+                <td>{{item.price | currency}}</td>
+                <td>{{item.price * item.qtd | currency}}</td>
+                <td><button ng-click="remove($index)">Rem.</button><button ng-click="editar($index)">Ed.</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<dir-pagination-controls boundary-links="true"  template-url="common/dirPagination.tpl.html"></dir-pagination-controls>
+</p>
