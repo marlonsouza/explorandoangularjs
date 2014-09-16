@@ -8,23 +8,21 @@
     <title>Explorando AngularJS</title>
 </head>
 <body ng-controller="itemsController">
-    <div class="principal">
-        <header>
-            <img src="./images/angularjs.png" id="logoangular" />
-            <div ng-include="'./views/menu.html'"></div>
-            <hr>
-        </header>
-
         <div class="container-fluid">
-            <ng-view></ng-view>
-        </div>
+            <header>
+                <img src="./images/angularjs.png" id="logoangular" />
+                <div ng-include="'./views/menu.html'"></div>
+                <hr>
+            </header>
 
-        <footer>
-            <hr>
-            <br />
-            <marlon></marlon>
-        </footer>
-    </div>
+            <ng-view></ng-view>
+
+            <footer>
+                <hr>
+                <br />
+                <marlon></marlon>
+            </footer>
+        </div>
 
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -37,16 +35,12 @@
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <!-- endbower -->
 
-
-
-
     <script src="main.js"></script>
     <script src="controllers/mainController.js"></script>
     <script src="common/dirPagination.js"></script>
 
     <!-- CSS -->
     <link href="css/styles.css" type="text/css" rel="stylesheet">
-    <link href="css/main.css" type="text/css" rel="stylesheet">
 
 
 </body>

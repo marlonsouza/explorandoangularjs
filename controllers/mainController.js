@@ -34,37 +34,28 @@ app.controller('itemsController', function ($scope) {
 	}
 
 	$scope.cadastrarNovo = function(){
-
+        $scope.newitem = null;
 		$scope.salvar = novo();
         $scope.id = 0;
-
-        location.href = './#/novoitem';
 	}
 
     $scope.editar = function(index){
-
-        $scope.adicionaItem = true;
         $scope.newitem = $scope.items[index];
         $scope.salvar = update();
         $scope.id = index;
-
-        location.href = './#/novoitem';
     }
 
     function novo (){
         return function(item){
-            console.log(item);
             $scope.items.push(item);
-            $scope.newitem = null;
-            location.href = './#/listaitens';
+            $('#myModal').modal('hide');
         }
     }
 
     function update(){
         return function(item){
             $scope.items[$scope.id] = item;
-            $scope.newitem = null;
-            location.href = './#/listaitens';
+            $('#myModal').modal('hide');
         }
     }
 

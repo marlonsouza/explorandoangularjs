@@ -24,7 +24,7 @@ app.config(function($routeProvider){
       templateUrl: 'views/sobre.tpl.html'
    });
 
-   $routeProvider.when('/portal',{
-      templateUrl: 'views/vendedor.tpl.html'
+   $routeProvider.when('/vendas',{
+      templateUrl: 'views/vendas.tpl.html'
    });
 });

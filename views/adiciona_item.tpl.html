@@ -1,33 +1,45 @@
 <div class="cadastro">
-    <form class="form">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Item</h4>
+          </div>
 
-      <div class="form-group">
-        <label for="inputNome" class="col-sm-2 control-label">Nome</label>
-        <div class="col-sm-10">
-          <input ng-model='newitem.nome' type="text" class="form-control" id="inputNome" placeholder="Nome">
+            <div class="modal-body">
+            <form class="form-horizontal">
+
+                <div class="form-group">
+                    <label for="inputNome" class="col-sm-2 control-label">Nome</label>
+                    <div class="col-sm-10">
+                        <input ng-model='newitem.nome' type="text" class="form-control" id="inputNome" placeholder="Nome">
+                    </div>
+                 </div>
+
+                <div class="form-group">
+                    <label for="inputQtd" class="col-sm-2 control-label">Quantidade</label>
+                    <div class="col-sm-10">
+                        <input ng-model='newitem.qtd' type="text" class="form-control" id="inputQtd" placeholder="Quantidade">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputNome" class="col-sm-2 control-label">Preço</label>
+                    <div class="col-sm-10">
+                        <input ng-model='newitem.price' type="text" class="form-control" id="inputNome" placeholder="Preço">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button ng-click='salvar(newitem)' type="button" class="btn btn-primary">Save changes</button>
+            </div>
+
+            </form>
         </div>
       </div>
-
-      <div class="form-group">
-        <label for="inputQtd" class="col-sm-2 control-label">Quantidade</label>
-        <div class="col-sm-10">
-          <input ng-model='newitem.qtd' type="text" class="form-control" id="inputQtd" placeholder="Quantidade">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="inputNome" class="col-sm-2 control-label">Preço</label>
-        <div class="col-sm-10">
-          <input ng-model='newitem.price' type="text" class="form-control" id="inputNome" placeholder="Preço">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button ng-click='salvar(newitem)' class="btn btn-default">Salvar</button>
-        </div>
-      </div>
-
-    </form>
+    </div>
 </div>
 

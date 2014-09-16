@@ -1,6 +1,7 @@
 
-<button ng-click="cadastrarNovo()" ng-href="./#/novoitem">Adicionar Novo Item</button>
+<button class="btn btn-primary btn-sm" ng-click="cadastrarNovo()" data-toggle="modal" data-target="#myModal">Adicionar Novo Item</button>
 
+<div ng-include="'./views/adiciona_item.tpl.html'"></div>
 
 <p>
 <div class="lista">
@@ -21,7 +22,8 @@
                 <td><input ng-model='item.qtd'></td>
                 <td>{{item.price | currency}}</td>
                 <td>{{item.price * item.qtd | currency}}</td>
-                <td><button ng-click="remove($index)">Rem.</button><button ng-click="editar($index)">Ed.</button></td>
+                <td><button ng-click="remove($index)" class="btn btn-default btn-sm">Rem.</button>
+                    <button class="btn btn-default btn-sm" ng-click="editar($index)" data-toggle="modal" data-target="#myModal">Ed. </button>
             </tr>
         </tbody>
     </table>
