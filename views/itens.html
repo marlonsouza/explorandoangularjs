@@ -1,0 +1,29 @@
+<div>
+    <button class="btn btn-primary btn-sm" ng-click="cadastrarNovo()" data-toggle="modal" data-target="#myModal">Adicionar Novo Item</button>
+
+    <div ng-include="'./views/novo_item.html'"></div>
+
+    <p>
+    <div class="lista">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nome</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr dir-paginate="item in items | itemsPerPage:10">
+                    <td>{{item.i_item}}</td>
+                    <td>{{item.nome}}</td>
+                    <td><button ng-click="remove($index)" class="btn btn-default btn-sm">Rem.</button>
+                        <button class="btn btn-default btn-sm" ng-click="editar($index)" data-toggle="modal" data-target="#myModal">Ed. </button>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <dir-pagination-controls boundary-links="true"  template-url="common/dirPagination.tpl.html"></dir-pagination-controls>
+    </p>
+</div>

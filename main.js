@@ -1,30 +1,40 @@
-var app = angular.module('myApp',['ngRoute']);
+angular.module('myApp',['ngRoute', 'restangular'])
 
-app.directive('marlon', function(){
+.directive('marlon', function(){
    return{
        restrict: 'E',
        templateUrl: '/explorandoangularjs/views/marlon.html'
    }
-});
+})
 
-app.config(function($routeProvider){
+.config(function($routeProvider){
    $routeProvider.when('/', {
-        templateUrl:'views/lista_itens.tpl.html'
+        templateUrl:'views/home.html'
    });
 
-   $routeProvider.when('/novoitem', {
-        templateUrl:'views/adiciona_item.tpl.html'
-   });
-
-   $routeProvider.when('/listaitens', {
-        templateUrl:'views/lista_itens.tpl.html'
+   $routeProvider.when('/estoque', {
+        templateUrl:'views/estoque.html',
+        controller: 'estoqueController'
    });
 
    $routeProvider.when('/sobre',{
-      templateUrl: 'views/sobre.tpl.html'
+      templateUrl: 'views/sobre.html'
    });
 
    $routeProvider.when('/vendas',{
-      templateUrl: 'views/vendas.tpl.html'
+      templateUrl: 'views/vendas.html'
    });
-});
+
+   $routeProvider.when('/itens',{
+      templateUrl: 'views/itens.html',
+      controller: 'itemsController'
+   });
+})
+
+.factory('RestangularWithCache', ['Restangular', function(Restangular) {
+    'use strict';
+    return Restangular.withConfig(function(RestangularConfigurer){
+        RestangularConfigurer.setDefaultHttpFields({cache: true});
+    });
+
+}]);

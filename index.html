@@ -4,10 +4,13 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <!-- endbower -->
+
+    <!--CSS personalizado-->
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Explorando AngularJS</title>
 </head>
-<body ng-controller="itemsController">
+<body>
         <div class="container-fluid">
             <header>
                 <img src="./images/angularjs.png" id="logoangular" />
@@ -36,12 +39,12 @@
     <!-- endbower -->
 
     <script src="main.js"></script>
-    <script src="controllers/mainController.js"></script>
+    <script src="controllers/estoqueController.js"></script>
+    <script src="controllers/itemsController.js"></script>
     <script src="common/dirPagination.js"></script>
-
-    <!-- CSS -->
-    <link href="css/styles.css" type="text/css" rel="stylesheet">
-
+    <script src="restangular.config.js"></script>
+    <script src="services/items.js"></script>
+    <script src="services/estoque.js"></script>
 
 </body>
 </html>

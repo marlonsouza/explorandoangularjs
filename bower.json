@@ -2,8 +2,6 @@
   "name": "explorandoangularjs",
   "version": "0.0.0",
    "devDependencies": {
-    "grunt": "",
-    "grunt-wiredep": ""
   },
   "homepage": "https://github.com/marlonsouza/explorandoangularjs",
   "description": "Estudando angulajs a fundo.",
@@ -19,6 +17,7 @@
     "bootstrap": "",
     "angular-bootstrap":"",
     "angular-ui-router":""
+
   },
 
   "authors": [
