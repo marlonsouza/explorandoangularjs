@@ -1,13 +1,26 @@
 angular.module('myApp').
 
-controller('itemsController', ['$scope','ItemsRepositorio',function($scope, ItemsRepositorio){
+controller('itemsController', ['$scope','ItemsRepositorio', '_','promiseTracker',function($scope, ItemsRepositorio, _, promiseTracker){
 
     (function(){
         carregaItems();
     })();
 
-    $scope.remove = function(index){
-		$scope.items.splice(index,1);
+    $scope.tracker = {};
+	$scope.tracker.removendoItem = promiseTracker();
+
+    $scope.remove = function(item){
+		var promise = ItemsRepositorio.remove(item).then(
+            function(){
+                _.remove($scope.items, function(el){
+					return el.i_item == item.i_item;
+				});
+            },
+            function(){
+                alert('Erro ao remover o item');
+            });
+
+        $scope.tracker.removendoItem.addPromise(promise);
 	}
 
    $scope.cadastrarNovo = function(){
@@ -24,7 +37,7 @@ controller('itemsController', ['$scope','ItemsRepositorio',function($scope, Item
 
     function novo (){
         return function(item){
-            var newItemPromisse = ItemsRepositorio.add(item).then(
+            var promise = ItemsRepositorio.add(item).then(
                 function(){
                      $scope.items.unshift(item);
                      $('#myModal').modal('hide');
@@ -39,9 +52,9 @@ controller('itemsController', ['$scope','ItemsRepositorio',function($scope, Item
 
     function update(){
         return function(item){
-            var itemPromisse = ItemsRepositorio.update(item).then(
+            var promise = ItemsRepositorio.update(item).then(
                 function(){
-                    $scope.items[$scope.id] = item;
+                    $scope.items[$scope.i_item] = item;
                     $('#myModal').modal('hide');
                 },
                 function(){
@@ -52,7 +65,7 @@ controller('itemsController', ['$scope','ItemsRepositorio',function($scope, Item
     }
 
     function carregaItems(){
-        var itemsPromise = ItemsRepositorio.get().then(function(items){
+        var promise = ItemsRepositorio.get().then(function(items){
             $scope.items = items;
         });
     }

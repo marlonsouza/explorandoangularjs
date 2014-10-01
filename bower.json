@@ -16,8 +16,8 @@
     "angular-route":"",
     "bootstrap": "",
     "angular-bootstrap":"",
-    "angular-ui-router":""
-
+    "angular-ui-router":"",
+    "angular-promise-tracker":""
   },
 
   "authors": [

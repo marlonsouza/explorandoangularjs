@@ -13,7 +13,11 @@ angular.module('myApp')
             },
 
             update: function(item){
-                return Restangular.one('itens', item.i_item).customPOST(item);
+                return Restangular.one('item', item.i_item).customPUT(item);
+            },
+
+            remove: function(item){
+                return Restangular.one('item', item.i_item).customDELETE();
             }
         };
 

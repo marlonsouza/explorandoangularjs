@@ -1,4 +1,4 @@
-angular.module('myApp',['ngRoute', 'restangular'])
+angular.module('myApp',['ngRoute', 'restangular', 'ajoslin.promise-tracker'])
 
 .directive('marlon', function(){
    return{
@@ -6,6 +6,8 @@ angular.module('myApp',['ngRoute', 'restangular'])
        templateUrl: '/explorandoangularjs/views/marlon.html'
    }
 })
+
+.constant('_', window._)
 
 .config(function($routeProvider){
    $routeProvider.when('/', {
