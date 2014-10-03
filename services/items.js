@@ -1,5 +1,5 @@
 angular.module('myApp')
-    .factory('ItemsRepositorio', ['Restangular', '$http', function(Restangular, $http){
+    .factory('ItemsRepositorio', ['Restangular', function(Restangular){
 
         'use strict';
 

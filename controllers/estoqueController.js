@@ -13,7 +13,7 @@ angular.module('myApp')
 		var promise = EstoqueRepositorio.remove(lote).then(
             function(){
                 _.remove($scope.estoque, function(el){
-                    return el.id = estoque.id;
+                    return el.id = $scope.estoque.id;
                 });
             },
             function(){

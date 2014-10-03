@@ -9,6 +9,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Nome</th>
                     <th>Quantidade</th>
                     <th>Preço</th>
@@ -19,10 +20,11 @@
             <tbody>
 
                 <tr dir-paginate="lote in estoque | itemsPerPage:10">
+                    <td>{{lote.id}}</td>
                     <td>{{lote.nome}}</td>
-                    <td><input ng-model='item.quantidade'></td>
+                    <td>{{lote.quantidade}}</td>
                     <td>{{lote.preco | currency}}</td>
-                    <td>{{lote.preco * item.quantidade | currency}}</td>
+                    <td>{{lote.preco * lote.quantidade | currency}}</td>
                     <td><button ng-click="remove(lote)" class="btn btn-default btn-sm">Rem.</button>
                         <button class="btn btn-default btn-sm" ng-click="editar($index)" data-toggle="modal" data-target="#myModal">Ed. </button>
                 </tr>
