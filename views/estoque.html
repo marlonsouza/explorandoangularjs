@@ -10,6 +10,7 @@
             <thead>
                 <tr>
                     <th>Id</th>
+                    <th>Cod. Item</th>
                     <th>Nome</th>
                     <th>Quantidade</th>
                     <th>Preço</th>
@@ -21,6 +22,7 @@
 
                 <tr dir-paginate="lote in estoque | itemsPerPage:10">
                     <td>{{lote.id}}</td>
+                    <td>{{lote.i_item}}</td>
                     <td>{{lote.nome}}</td>
                     <td>{{lote.quantidade}}</td>
                     <td>{{lote.preco | currency}}</td>
