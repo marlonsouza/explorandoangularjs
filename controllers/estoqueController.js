@@ -2,12 +2,13 @@ angular.module('myApp')
 
 .controller('estoqueController', ['$scope', 'EstoqueRepositorio','_','promiseTracker',function ($scope, EstoqueRepositorio, _, promiseTracker) {
 
+    $scope.tracker = {};
+    $scope.tracker.carregandoEstoque = promiseTracker();
+	$scope.tracker.removentoEstoque = promiseTracker();
+
 	(function(){
         carregaEstoque();
     })();
-
-    $scope.tracker = {};
-	$scope.tracker.removentoEstoque = promiseTracker();
 
     $scope.remove = function(lote){
 		var promise = EstoqueRepositorio.remove(lote).then(
@@ -15,13 +16,14 @@ angular.module('myApp')
                 _.remove($scope.estoque, function(el){
                     return el.id = lote.id;
                 });
+                alert("Teste remove");
             },
             function(){
                 alert('Erro ao remover o lançamento');
             }
         );
 
-        $scope.tracker.removendoEstoque.addPromise(promise);
+         $scope.tracker.removentoEstoque.addPromise(promise);
 	}
 
 	$scope.cadastrarNovo = function(){
@@ -68,6 +70,7 @@ angular.module('myApp')
         var itemsPromise = EstoqueRepositorio.get().then(function(estoque){
             $scope.estoque = estoque;
         });
+        $scope.tracker.carregandoEstoque.addPromise(itemsPromise);
     }
 
 }]);

@@ -2,12 +2,13 @@ angular.module('myApp').
 
 controller('itemsController', ['$scope','ItemsRepositorio', '_','promiseTracker',function($scope, ItemsRepositorio, _, promiseTracker){
 
+    $scope.tracker = {};
+	$scope.tracker.removendoItem = promiseTracker();
+    $scope.tracker.carregandoItens = promiseTracker();
+
     (function(){
         carregaItems();
     })();
-
-    $scope.tracker = {};
-	$scope.tracker.removendoItem = promiseTracker();
 
     $scope.remove = function(item){
 		var promise = ItemsRepositorio.remove(item).then(
@@ -68,6 +69,8 @@ controller('itemsController', ['$scope','ItemsRepositorio', '_','promiseTracker'
         var promise = ItemsRepositorio.get().then(function(items){
             $scope.items = items;
         });
+
+        $scope.tracker.carregandoItens.addPromise(promise);
     }
 
 }]);
