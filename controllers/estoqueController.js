@@ -11,22 +11,21 @@ angular.module('myApp')
     })();
 
     $scope.remove = function(lote){
-		var promise = EstoqueRepositorio.remove(lote).then(
+        var promise = EstoqueRepositorio.remove(lote).then(
             function(){
                 _.remove($scope.estoque, function(el){
-                    return el.id = lote.id;
+                    return el.id == lote.id;
                 });
-                alert("Teste remove");
             },
             function(){
                 alert('Erro ao remover o lançamento');
             }
         );
 
-         $scope.tracker.removentoEstoque.addPromise(promise);
+        $scope.tracker.removentoEstoque.addPromise(promise);
 	}
 
-	$scope.cadastrarNovo = function(){
+    $scope.cadastrarNovo = function(){
         $scope.newitem = null;
 		$scope.salvar = novo();
         $scope.id = 0;
@@ -67,10 +66,10 @@ angular.module('myApp')
     }
 
     function carregaEstoque(){
-        var itemsPromise = EstoqueRepositorio.get().then(function(estoque){
+        var estoquePromise = EstoqueRepositorio.get().then(function(estoque){
             $scope.estoque = estoque;
         });
-        $scope.tracker.carregandoEstoque.addPromise(itemsPromise);
+        $scope.tracker.carregandoEstoque.addPromise(estoquePromise);
     }
 
 }]);
